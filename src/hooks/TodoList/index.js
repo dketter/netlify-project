@@ -6,14 +6,16 @@ function TodoList() {
     
     const handleChange = (event) => setCurrentTodo(event.target.value || '');
     const addTodo = () => {
-        prevTodos.push(currentTodo);
+        let newTodos = [...todos];
+        newTodos.push(currentTodo);
+        setTodos(newTodos);
         setCurrentTodo('');
     }
 
     return <div className="container">
         <h2>Todos</h2>
         <input onChange={handleChange} value={currentTodo} />
-        <button onClick={this.addTodo}>Add Todo</button>
+        <button onClick={addTodo}>Add Todo</button>
         <ul>
             {todos.map(item => <li key={Math.random()}>{item}</li>)}
         </ul>

@@ -4,6 +4,7 @@ class TodoList extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            todos: [],
             currentTodo: ''
         };
         this.addTodo = this.addTodo.bind(this);
@@ -35,6 +36,6 @@ class TodoList extends React.Component {
             </ul>
         </div>
     }
-}
+};
 
 export default TodoList;

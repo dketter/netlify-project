@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Counter from './Counter';
-import { TodoList } from './TodoList';
+import TodoList from './TodoList';
 
 class Classes extends React.Component {
     render() {
